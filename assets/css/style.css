@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+:root {
+  --theme-green: #44a076;
+  --sidebar-green: #54b689;
+}
+
+html,
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+}
+/* .socials a {
+    text-decoration: none;
+    color: var(--theme-green) !important;
+} */
+.socials .fab {
+  color: var(--theme-green) !important;
+}
+.aside-menu {
+  border-right: 0.2rem solid var(--theme-green);
+  background-color: var(--sidebar-green);
+}
+.menu-list ul li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+.section-title {
+  text-transform: capitalize;
+}
+.section-title:before {
+  content: '';
+  display: inline-block;
+  width: 0.32rem;
+  height: 100%;
+  background: var(--theme-green);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0,0,0,0.08) !important;
+}
+
+h3.section-title {
+  font-size: 1.3rem !important;
+}
+
+/* .skill-card {
+  max-width: 40% !important;
+} */
