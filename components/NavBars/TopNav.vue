@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar header has-shadow is-primary is-hidden-desktop"
+    class="navbar header has-shadow is-theme-green is-hidden-desktop"
     role="navigation"
     aria-label="main navigation"
   >

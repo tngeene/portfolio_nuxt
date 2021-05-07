@@ -9,6 +9,7 @@ html,
 body {
   font-family: 'Nunito', sans-serif;
   line-height: 1.5;
+  scroll-behavior: smooth;
   height: 100vh;
 }
 /* .socials a {
@@ -28,15 +29,11 @@ body {
 .section-title {
   text-transform: capitalize;
 }
-.section-title:before {
-  content: '';
-  display: inline-block;
-  width: 0.32rem;
-  height: 100%;
-  background: var(--theme-green);
-  position: absolute;
-  left: 0;
-  top: 0;
+.section-title {
+  border-left: 4px solid var(--sidebar-green);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0.5rem;
 }
 hr {
   margin-top: 1rem;
@@ -49,7 +46,24 @@ hr {
 h3.section-title {
   font-size: 1.3rem !important;
 }
+.is-theme-green {
+  background-color: var(--theme-green);
+  color: #fff;
+}
 
-/* .skill-card {
-  max-width: 40% !important;
-} */
+.content {
+  max-width: none !important;
+  padding-left: 0.44rem;
+  padding-right: 1.68rem;
+  width: 100%;
+}
+
+.skill-card {
+  height: 17rem !important;
+
+}
+
+:is(.lni-write, .lni-code-alt, .lni-support) {
+  font-size: 3.75rem !important;
+  color: var(--theme-green);
+}

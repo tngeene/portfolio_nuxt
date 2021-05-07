@@ -1,8 +1,8 @@
 <template>
   <div>
     <TopNav />
-    <SideNav />
     <div class="columns">
+      <SideNav />
       <div class="columns is-9">
         <nuxt />
       </div>

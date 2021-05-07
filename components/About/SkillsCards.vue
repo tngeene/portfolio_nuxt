@@ -1,56 +1,51 @@
 <template>
-  <div class="columns is-variable is-multiline">
+  <div class="columns is-variable is-multiline mt-2">
     <div class="column is-one-third">
-      <div class="card">
-        <div class="card-image skill-card">
-          <figure class="image is-4by3">
-            <img src="/img/web-trio.png" alt="Placeholder image" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="column is-one-third">
-      <div class="card">
-        <div class="card-image skill-card">
-          <figure class="image is-4by3">
-            <img src="/img/django.png" alt="Placeholder image" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="column is-one-third">
-      <div class="card">
-        <div class="card-image skill-card">
-          <figure class="image is-4by3">
-            <img src="/img/laravel.png" alt="Placeholder image" />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="column is-one-third">
-      <div class="card">
-        <div class="card-image skill-card">
-          <figure class="image is-4by3">
-            <img src="/img/vue.png" alt="Placeholder image" />
-          </figure>
+      <div class="card skill-card">
+        <div class="column">
+          <div class="column is-full has-text-centered">
+            <i class="lni lni-code-alt"></i>
+          </div>
+          <div class="column is-full has-text-centered">
+            <h4 class="service-title is-4">Full-stack Development</h4>
+            <p>
+              I'm a full-stack developer capable of building a product from
+              beginning to end, following appropriate system design principles.
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div class="column is-one-third">
       <div class="card skill-card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="/img/node.png" alt="Placeholder image" />
-          </figure>
+        <div class="column">
+          <div class="column is-full has-text-centered">
+            <i class="lni lni-support"></i>
+          </div>
+          <div class="column is-full has-text-centered">
+            <h4 class="service-title is-4">Consultancy and Support</h4>
+            <p>
+              I provide technical advise on technology solutions for businesses,
+              focusing on SMEs and startups. I specialize in the e-commerce,
+              education and fintech spaces.
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <div class="column is-one-third">
       <div class="card skill-card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img src="/img/docker.png" alt="Placeholder image" />
-          </figure>
+        <div class="column">
+          <div class="column is-full has-text-centered">
+            <i class="lni lni-write"></i>
+          </div>
+          <div class="column is-full has-text-centered">
+            <h4 class="service-title is-4">Technical Writing</h4>
+            <p>
+              I'm highly proficient in writing technical guides for projects to
+              technical and non-technical audiences.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -59,6 +54,6 @@
 
 <script>
 export default {
-  name: 'SkillsCards',
+  name: 'Skillscard',
 }
 </script>

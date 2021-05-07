@@ -1,8 +1,6 @@
 <template>
-  <section class="main-content columns">
-    <aside
-      class="column is-3 section is-hidden-touch has-text-centered aside-menu has-text-white"
-    >
+  <section class="side-nav aside-menu column is-3 is-hidden-touch">
+    <aside class="section has-text-centered has-text-white">
       <h3 class="is-3 title has-text-white">Ted Ngeene</h3>
       <div class="is-flex is-align-items-center mb-3 is-flex-direction-column">
         <figure class="image is-128x128">
