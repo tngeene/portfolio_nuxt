@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-variable is-multiline mt-2">
-    <div class="column is-one-third">
+    <div class="column is-4">
       <div class="card article-card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="column is-one-third">
+    <div class="column is-4">
       <div class="card article-card">
         <div class="card-image">
           <figure class="image is-4by3">
@@ -54,7 +54,7 @@
         </div>
       </div>
     </div>
-    <div class="column is-one-third">
+    <div class="column is-4">
       <div class="card article-card">
         <div class="card-image">
           <figure class="image is-4by3">

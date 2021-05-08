@@ -1,58 +1,59 @@
 <template>
-  <div class="columns is-variable is-multiline mt-2">
-    <div class="column is-half">
+  <div class="columns is-variable is-multiline">
+    <div class="column is-half mb-5">
       <div class="card project-card">
-        <div class="columns">
-          <div
-            class="card-image column is-full-mobile is-one-third-desktop is-one-third-widescreen"
-          >
-            <b-image
-              src="https://picsum.photos/id/1074/800/400"
-              class="is-128x128 is-square"
-            >
-              <template #placeholder>
-                <b-skeleton
-                  class="skeleton-placeholder"
-                  height="100%"
-                ></b-skeleton>
-              </template>
-            </b-image>
+        <div class="columns no-gutters">
+          <div class="column is-4 project-img-holder">
+            <img
+              src="https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/project/project-2.jpg"
+              alt="Placeholder image"
+              class="project-img"
+            />
           </div>
-          <div
-            class="column is-full-mobile is-two-thirds-desktop is-two-thirds-widescreen"
-          >
-            <h4 class="is-4 title">Project title</h4>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient...
-            <small class="mt-4 has-text-grey-dark">Client: Google</small>
+          <div class="column is-8 px-5">
+            <h4 class="title is-4 project-title">Project title</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient...
+            </p>
+            <p><small class="mt-2 has-text-grey-dark">Client: Google</small></p>
+          </div>
+          <div class="project-details fadeIn-bottom">
+            <a class="btn btn-secondary" href="project.html">
+              <button class="button is-dark">
+                <i class="fas fa-eye mr-2"></i> View Project
+              </button>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="column is-half">
+    <div class="column is-half mb-5">
       <div class="card project-card">
-        <div class="columns">
-          <div
-            class="column is-full-mobile is-one-third-desktop is-one-third-widescreen"
-          >
-            <b-image src="https://picsum.photos/id/1074/800/400" ratio="2by1">
-              <template #placeholder>
-                <b-skeleton
-                  class="skeleton-placeholder"
-                  height="100%"
-                ></b-skeleton>
-              </template>
-            </b-image>
+        <div class="columns no-gutters">
+          <div class="column is-4 project-img-holder">
+            <img
+              src="https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/project/project-2.jpg"
+              alt="Placeholder image"
+              class="project-img"
+            />
           </div>
-          <div
-            class="column is-full-mobile is-two-thirds-desktop is-two-thirds-widescreen"
-          >
-            <h4 class="is-4 title">Project title</h4>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient...
-            <small class="mt-4 has-text-grey-dark">Client: Google</small>
+          <div class="column is-8 px-5">
+            <h4 class="title is-4 project-title">Project title</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+              penatibus et magnis dis parturient...
+            </p>
+            <p><small class="mt-2 has-text-grey-dark">Client: Google</small></p>
+          </div>
+          <div class="project-details fadeIn-bottom">
+            <a class="btn btn-secondary" href="project.html">
+              <button class="button is-dark">
+                <i class="fas fa-eye mr-2"></i> View Project
+              </button>
+            </a>
           </div>
         </div>
       </div>

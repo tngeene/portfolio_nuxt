@@ -31,8 +31,8 @@ body {
 }
 .section-title {
   border-left: 4px solid var(--sidebar-green);
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
   padding: 0.5rem;
 }
 hr {
@@ -40,7 +40,7 @@ hr {
   margin-bottom: 1rem;
   border: 0;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgba(0,0,0,0.08) !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
 }
 
 h3.section-title {
@@ -60,10 +60,82 @@ h3.section-title {
 
 .skill-card {
   height: 17rem !important;
-
 }
 
 :is(.lni-write, .lni-code-alt, .lni-support) {
   font-size: 3.75rem !important;
   color: var(--theme-green);
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters>.column, .no-gutters>[class*="is-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.project-card {
+  position: relative ;
+  height: 110%;
+}
+.img {
+  vertical-align: middle;
+  border-style: none;
+}
+.project-img-holder {
+  max-height: 12.5rem;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.project-img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+}
+.project-title {
+  margin-bottom: 0.5em !important;
+}
+
+.project-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s
+}
+
+.project-card:hover .columns .column {
+  background-color: #fff;
+}
+
+.project-card:hover .columns .column {
+  filter: brightness(50%);
+}
+.project-card:hover .project-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1
+}
+.fadeIn-bottom {
+  top: 80%
+}
+
+/* media queries */ 
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .project-img-holder {
+    max-height: 18.75rem;
+    overflow: hidden;
+    vertical-align: middle;
+  }
 }
