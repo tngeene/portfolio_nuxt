@@ -29,6 +29,9 @@
           <a href="https://dev.to/tngeene" target="_blank"
             ><i class="fab fa-dev"></i
           ></a>
+          <a href="https://t.me/Ngeene_kihiu" target="_blank"
+            ><i class="fab fa-telegram"></i
+          ></a>
         </section>
       </div>
       <hr />

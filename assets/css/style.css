@@ -3,6 +3,34 @@
 :root {
   --theme-green: #44a076;
   --sidebar-green: #54b689;
+  --html-red: #DE6E3C;
+  --css-blue: #53A7DC;
+  --js-yellow: #F1DE4F;
+  --vue-green: #64B687;
+  --laravel-red: #ff2d20;
+  --php-blue: #777BAF;
+  --python-blue: #456E9C;
+  --git-red: #bd2c00;
+  --docker-blue: #0db7ed;
+  --react-blue: #62D4FA;
+  --bg: #091a28;
+  --color: #ebf4f1;
+}
+
+.dark-mode {
+  --color: #ebf4f1;
+  --color-primary: #41b38a;
+  --color-secondary: #fdf9f3;
+  --bg: #091a28;
+  --bg-secondary: #071521;
+  --border-color: #0d2538;
+}
+.sepia-mode {
+  --color: #433422;
+  --color-secondary: #504231;
+  --bg: #f1e7d0;
+  --bg-secondary: #eae0c9;
+  --border-color: #ded0bf;
 }
 
 html,
@@ -11,6 +39,9 @@ body {
   line-height: 1.5;
   scroll-behavior: smooth;
   height: 100vh;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s;
 }
 /* .socials a {
     text-decoration: none;
@@ -22,6 +53,7 @@ body {
 .aside-menu {
   border-right: 0.2rem solid var(--theme-green);
   background-color: var(--sidebar-green);
+  overflow-y: auto;
 }
 .menu-list ul li:not(:last-child) {
   margin-bottom: 1.2rem;
@@ -128,7 +160,50 @@ h3.section-title {
 .fadeIn-bottom {
   top: 80%
 }
+.skill-icon {
+  font-size: 1.875rem;
+}
+.skill-title {
+  font-size: 1rem !important;
+}
 
+.lni-html5 {
+  color: var(--html-red)
+}
+.lni-css3 {
+  color: var(--css-blue)
+}
+.lni-docker {
+  color: var(--docker-blue);
+}
+.lni-python {
+  color: var(--python-blue);
+}
+.lni-laravel {
+  color: var(--laravel-red);
+}
+.lni-php {
+  color: var(--php-blue);
+}
+.lni-git {
+  color: var(--git-red)
+}
+.lni-nodejs {
+  color: var(--sidebar-green);
+}
+.lni-javascript {
+  color: var(--js-yellow)
+}
+.fa-vuejs {
+  color: var(--vue-green);
+}
+.lni-react {
+  color: var(--react-blue);
+}
+
+.contact-btn {
+  border: none;
+}
 /* media queries */ 
 
 /* Large devices (desktops, 992px and up) */
@@ -137,5 +212,8 @@ h3.section-title {
     max-height: 18.75rem;
     overflow: hidden;
     vertical-align: middle;
+  }
+  .skill-card {
+    height: 19rem !important;
   }
 }
