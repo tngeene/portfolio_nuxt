@@ -1,83 +1,35 @@
 <template>
-  <div class="columns is-variable is-multiline mt-2">
-    <div class="column is-4">
-      <div class="card article-card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt="Placeholder image"
-            />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <h4 class="is-4">Intro to vue.js</h4>
-            <small class="has-text-grey-light is-capitalize">
-              Published 3 May 2020 | Technology
-            </small>
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris.
-            <br />
-            <p class="mb-0 mt-4">
-              <a class="more-link" href="blog-post.html">Read more →</a>
-            </p>
-          </div>
-        </div>
+  <div class="column is-4">
+    <div class="card article-card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img
+            :src="article.coverImage.url"
+            :alt="`tngeene ${article.title}`"
+          />
+        </figure>
       </div>
-    </div>
-    <div class="column is-4">
-      <div class="card article-card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt="Placeholder image"
-            />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <h4 class="is-4">Intro to vue.js</h4>
-            <small class="has-text-grey-light is-capitalize">
-              Published 3 May 2020 | Technology
-            </small>
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris.
-            <br />
-            <p class="mb-0 mt-4">
-              <a class="more-link" href="blog-post.html">Read more →</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="column is-4">
-      <div class="card article-card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt="Placeholder image"
-            />
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="content">
-            <h4 class="is-4">Intro to vue.js</h4>
-            <small class="has-text-grey-light is-capitalize">
-              Published 3 May 2020 | Technology
-            </small>
-            <br />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris.
-            <br />
-            <p class="mb-0 mt-4">
-              <a class="more-link" href="blog-post.html">Read more →</a>
-            </p>
-          </div>
+      <div class="card-content">
+        <div class="content">
+          <h4 class="is-4 is-capitalized">{{ article.title }}</h4>
+          <small class="has-text-grey-light is-capitalized">
+            Published
+            {{ new Date(article.published_at).toLocaleDateString() }} |
+            {{ article.category.name }}
+          </small>
+          <br />
+          <p
+            v-if="article.body"
+            v-html="$md.render(article.body.slice(0, 40))"
+          ></p>
+          <br />
+          <p class="mb-0 mt-4">
+            <nuxt-link
+              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+              class="more-link"
+              >Read more →</nuxt-link
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -87,5 +39,18 @@
 <script>
 export default {
   name: 'ArticleCard',
+  props: {
+    article: {
+      type: Object,
+      default() {
+        return {
+          coverImage: '',
+          title: '',
+          body: '',
+          published_at: '',
+        }
+      },
+    },
+  },
 }
 </script>

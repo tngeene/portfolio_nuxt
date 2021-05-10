@@ -30,7 +30,13 @@
     <hr />
     <section id="blog" class="container blog ml-3 px-3">
       <h3 class="title is-3 section-title">Latest blog posts</h3>
-      <ArticleCard />
+      <div class="columns is-variable is-multiline mt-2">
+        <ArticleCard
+          v-for="article in articles"
+          :key="article.slug"
+          :article="article"
+        />
+      </div>
     </section>
     <hr />
     <section id="contact" class="container content contact ml-3">
@@ -81,6 +87,7 @@ import ArticleCard from '~/components/content/ArticleCard'
 import ProjectCard from '~/components/content/ProjectCard'
 import ServicesCards from '~/components/about/ServicesCards'
 import SkillsCards from '~/components/about/SkillsCards'
+const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 
 export default {
   name: 'HomePage',
@@ -90,6 +97,26 @@ export default {
     ProjectCard,
     ServicesCards,
     SkillsCards,
+  },
+  data() {
+    return {
+      articles: null,
+      projects: null,
+      about: null,
+    }
+  },
+  mounted() {
+    this.fetchArticles()
+  },
+  methods: {
+    async fetchArticles() {
+      await this.$strapi.find('articles').then((response) => {
+        this.articles = response.reverse()
+        response.forEach((article) => {
+          article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.small.url}`
+        })
+      })
+    },
   },
 }
 </script>

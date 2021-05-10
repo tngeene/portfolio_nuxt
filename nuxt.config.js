@@ -43,6 +43,7 @@ export default {
     '@nuxtjs/pwa',
     // https://strapi.nuxtjs.org/
     '@nuxtjs/strapi',
+    '@nuxtjs/markdownit',
   ],
 
   // Strapi module configuration: https://strapi.nuxtjs.org/setup
@@ -56,6 +57,13 @@ export default {
       'projects',
       'tags',
     ],
+  },
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true,
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
