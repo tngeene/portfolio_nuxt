@@ -39,17 +39,24 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/buefy
     'nuxt-buefy',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://strapi.nuxtjs.org/
+    '@nuxtjs/strapi',
   ],
 
-  publicRuntimeConfig: {
-    baseUrl: process.env.BASE_API_URL,
+  // Strapi module configuration: https://strapi.nuxtjs.org/setup
+  strapi: {
+    url: process.env.STRAPI_URL,
+    entities: [
+      'about',
+      'articles',
+      'articles-series',
+      'categories',
+      'projects',
+      'tags',
+    ],
   },
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
