@@ -7,7 +7,9 @@
       </div>
       <h3 class="title is-3 skill-title">HTML & CSS</h3>
       <div class="skill-description">
-        I leverage the power of this dynamic duo to create responsive web apps.
+        We cannot talk about web development without talking about responsive
+        design. I leverage the power of this dynamic duo to create responsive
+        web apps.
       </div>
     </div>
     <div class="column is-6-mobile is-3-desktop">

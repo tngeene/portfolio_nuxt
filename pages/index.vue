@@ -1,6 +1,8 @@
 <template>
   <div class="section">
-    <AboutSection />
+    <section id="about">
+      <AboutSection />
+    </section>
     <hr />
     <section id="services" class="container content services ml-3">
       <h3 class="title is-3 section-title">My Expertise</h3>
@@ -82,7 +84,6 @@ import SkillsCards from '~/components/about/SkillsCards'
 
 export default {
   name: 'HomePage',
-
   components: {
     AboutSection,
     ArticleCard,

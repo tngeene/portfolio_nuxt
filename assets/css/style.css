@@ -3,27 +3,35 @@
 :root {
   --theme-green: #44a076;
   --sidebar-green: #54b689;
-  --html-red: #DE6E3C;
-  --css-blue: #53A7DC;
-  --js-yellow: #F1DE4F;
-  --vue-green: #64B687;
+  --html-red: #de6e3c;
+  --css-blue: #53a7dc;
+  --js-yellow: #f1de4f;
+  --vue-green: #64b687;
   --laravel-red: #ff2d20;
-  --php-blue: #777BAF;
-  --python-blue: #456E9C;
+  --php-blue: #777baf;
+  --python-blue: #456e9c;
   --git-red: #bd2c00;
   --docker-blue: #0db7ed;
-  --react-blue: #62D4FA;
-  --bg: #091a28;
-  --color: #ebf4f1;
+  --react-blue: #62d4fa;
+  --color: #243746;
+  --color-primary: #158876;
+  --color-secondary: #0e2233;
+  --bg: #f3f5f4;
+  --bg-secondary: #fff;
+  --border-color: #ddd;
+  --github-black: #333;
+  --discord-blue: #7289da;
+  --telegram-blue: #0088cc;
 }
 
 .dark-mode {
   --color: #ebf4f1;
   --color-primary: #41b38a;
   --color-secondary: #fdf9f3;
-  --bg: #091a28;
-  --bg-secondary: #071521;
+  --bg: linear-gradient(to right, #141e30, #243b55);
+  --bg-secondary: #1a2733;
   --border-color: #0d2538;
+  background-image: linear-gradient(to right, #141e30, #243b55);
 }
 .sepia-mode {
   --color: #433422;
@@ -31,6 +39,22 @@
   --bg: #f1e7d0;
   --bg-secondary: #eae0c9;
   --border-color: #ded0bf;
+}
+
+.dark-mode h1, 
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4, 
+.dark-mode h5,
+.dark-mode h6 {
+  color: #fff !important;
+}
+ 
+.card {
+  background-color: var(--bg);
+}
+.dark-mode  .card p {
+  color: #fdf9f3;
 }
 
 html,
@@ -55,6 +79,10 @@ body {
   background-color: var(--sidebar-green);
   overflow-y: auto;
 }
+.aside-menu .fab {
+  color: #fff !important;
+}
+
 .menu-list ul li:not(:last-child) {
   margin-bottom: 1.2rem;
 }
@@ -98,16 +126,31 @@ h3.section-title {
   font-size: 3.75rem !important;
   color: var(--theme-green);
 }
+.fa-twitter:hover {
+  color: var(--docker-blue) !important;
+}
+.fa-telegram:hover,
+.fa-linkedin:hover {
+  color: var(--telegram-blue) !important;
+}
+ .fa-discord:hover {
+  color: var(--discord-blue) !important;
+}
+.fa-github:hover, 
+.fa-dev:hover {
+  color: var(--github-black) !important;
+}
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
 }
-.no-gutters>.column, .no-gutters>[class*="is-"] {
+.no-gutters > .column,
+.no-gutters > [class*='is-'] {
   padding-right: 0;
   padding-left: 0;
 }
 .project-card {
-  position: relative ;
+  position: relative;
   height: 110%;
 }
 .img {
@@ -142,11 +185,16 @@ h3.section-title {
   transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .project-card:hover .columns .column {
   background-color: #fff;
+}
+
+
+.dark-mode .project-card:hover .columns .column {
+  filter: brightness(10%);
 }
 
 .project-card:hover .columns .column {
@@ -155,10 +203,10 @@ h3.section-title {
 .project-card:hover .project-details {
   top: 50%;
   left: 50%;
-  opacity: 1
+  opacity: 1;
 }
 .fadeIn-bottom {
-  top: 80%
+  top: 80%;
 }
 .skill-icon {
   font-size: 1.875rem;
@@ -168,10 +216,10 @@ h3.section-title {
 }
 
 .lni-html5 {
-  color: var(--html-red)
+  color: var(--html-red);
 }
 .lni-css3 {
-  color: var(--css-blue)
+  color: var(--css-blue);
 }
 .lni-docker {
   color: var(--docker-blue);
@@ -186,13 +234,13 @@ h3.section-title {
   color: var(--php-blue);
 }
 .lni-git {
-  color: var(--git-red)
+  color: var(--git-red);
 }
 .lni-nodejs {
   color: var(--sidebar-green);
 }
 .lni-javascript {
-  color: var(--js-yellow)
+  color: var(--js-yellow);
 }
 .fa-vuejs {
   color: var(--vue-green);
@@ -204,10 +252,10 @@ h3.section-title {
 .contact-btn {
   border: none;
 }
-/* media queries */ 
+/* media queries */
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   .project-img-holder {
     max-height: 18.75rem;
     overflow: hidden;

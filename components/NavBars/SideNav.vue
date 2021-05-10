@@ -37,25 +37,35 @@
       <hr />
       <div class="menu-list is-flex is-justify-content-center is-capitalized">
         <ul class="has-text-left">
-          <li><b-icon icon="account" /> About Me</li>
-          <li><b-icon icon="briefcase-variant" /> Portfolio</li>
-          <li><b-icon icon="typewriter" /> blog</li>
-          <li><b-icon icon="email-send" /> Contact</li>
+          <li>
+            <a href="#about"><b-icon icon="account" /> About Me</a>
+          </li>
+          <li>
+            <a href="#projects">
+              <b-icon icon="briefcase-variant" /> Portfolio
+            </a>
+          </li>
+          <li>
+            <a href="#blog"> <b-icon icon="typewriter" /> blog </a>
+          </li>
+          <li>
+            <a href="#contact"> <b-icon icon="email-send" /> Contact </a>
+          </li>
         </ul>
       </div>
       <hr />
-      <b-field>
-        <b-switch v-model="lightMode" passive-type="is-dark" type="is-light">
-          {{ lightMode ? 'Light Mode' : 'Dark Mode' }}
-        </b-switch>
-      </b-field>
+      <div class="container">
+        <ColorModePicker />
+      </div>
     </aside>
   </section>
 </template>
 
 <script>
+import ColorModePicker from '@/components/ColorModePicker'
 export default {
   name: 'SideNav',
+  components: { ColorModePicker },
   data() {
     return {
       lightMode: false,
@@ -63,3 +73,16 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.container {
+  text-align: center;
+  padding: 50px;
+}
+.menu-list a {
+  color: #fff !important;
+}
+.menu-list a:hover {
+  color: #000 !important;
+}
+</style>
