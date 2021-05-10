@@ -38,8 +38,6 @@ export default {
   },
   methods: {
     async fetchArticle(slug) {
-      // eslint-disable-next-line no-console
-      console.log('here')
       await this.$strapi.findOne('articles', slug).then((response) => {
         this.article = response
         this.article.coverImage.url = `${baseAPIUrl}${this.article.coverImage.formats.medium.url}`
