@@ -1,7 +1,11 @@
 <template>
   <div class="section">
-    <section id="about">
-      <AboutSection />
+    <section id="about" class="content">
+      <AboutSection
+        v-if="Object.keys(bio).length > 0"
+        :key="bio.id"
+        :about="bio"
+      />
     </section>
     <hr />
     <section id="services" class="container content services ml-3">
@@ -25,18 +29,26 @@
     <hr />
     <section id="projects" class="container content projects ml-3">
       <h3 class="title is-3 section-title">Featured projects</h3>
-      <div class="columns is-variable is-multiline mt-2">
+      <div class="columns is-variable is-multiline mt-2 is-mobile">
         <ProjectCard
           v-for="project in projects"
           :key="project.slug"
           :project="project"
         />
       </div>
+      <div class="is-flex is-justify-content-center">
+        <nuxt-link to="/projects">
+          <button class="button is-success">All Projects</button>
+        </nuxt-link>
+      </div>
     </section>
     <hr />
     <section id="blog" class="container blog ml-3 px-3">
       <h3 class="title is-3 section-title">Latest blog posts</h3>
-      <div v-if="projects" class="columns is-variable is-multiline mt-2">
+      <div
+        v-if="projects"
+        class="columns is-variable is-multiline mt-2 is-mobile"
+      >
         <ArticleCard
           v-for="article in articles"
           :key="article.slug"
@@ -44,6 +56,11 @@
         />
       </div>
       <div v-else class="">No project uploaded yet 🙁</div>
+      <div class="is-flex is-justify-content-center">
+        <nuxt-link to="/blog">
+          <button class="button is-success">All Blog Posts</button>
+        </nuxt-link>
+      </div>
     </section>
     <hr />
     <section id="contact" class="container content contact ml-3">
@@ -121,6 +138,7 @@ export default {
       articles: null,
       projects: null,
       about: null,
+      bio: {},
     }
   },
   head() {
@@ -147,6 +165,7 @@ export default {
   mounted() {
     this.fetchArticles()
     this.fetchProjects()
+    this.fetchBio()
   },
   methods: {
     async fetchArticles() {
@@ -163,6 +182,13 @@ export default {
         response.forEach((project) => {
           project.coverImage.url = `${baseAPIUrl}${project.coverImage.formats.small.url}`
         })
+      })
+    },
+    async fetchBio() {
+      await this.$strapi.find('about').then((response) => {
+        this.bio = response
+        this.bio.profilePicture.url = `${baseAPIUrl}${this.bio.profilePicture.formats.medium.url}`
+        this.bio.resume.url = `${baseAPIUrl}${this.bio.resume.url}`
       })
     },
   },

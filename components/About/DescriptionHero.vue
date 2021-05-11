@@ -5,27 +5,27 @@
       <h2 class="title is-2">Ted Ngeene</h2>
       <h5 class="subtitle is-5">Software Engineer</h5>
       <p>
-        I'm a software engineer specialised in frontend and backend development
-        for complex scalable web apps. I write about software development on my
-        blog. Want to know how I may help your project? Check out my project
-        portfolio and online resume.
+        {{ about.description }}
       </p>
+      <div class="interests mt-3">
+        <strong>Currently Learing:</strong> {{ about.currently_learning }}<br />
+        <strong>Interest/Hobbies:</strong> {{ about.hobbies }}<br />
+      </div>
       <div class="mt-5">
-        <b-button type="is-success is-light" class="mr-2"
+        <a class="button is-success is-light mr-2" href="#projects"
           ><span class="mdi mdi-briefcase-variant mdi-24px"></span> View
-          Portfolio</b-button
+          Portfolio</a
         >
-        <b-button type="is-dark"
-          ><span class="mdi mdi-file-document mdi-24px"></span> View
-          Resume</b-button
+        <a class="button is-dark" :href="about.resume.url" target="_blank"
+          ><span class="mdi mdi-file-document mdi-24px"></span> View Resume</a
         >
       </div>
     </div>
     <div class="column is-4">
       <b-image
-        src="https://picsum.photos/id/error/600/400"
-        src-fallback="https://picsum.photos/id/237/600/400"
-        ratio="16by9"
+        :src="about.profilePicture.url"
+        src-fallback="https://media-exp1.licdn.com/dms/image/C4E03AQGwIt_Ln5l3Ig/profile-displayphoto-shrink_400_400/0/1563688841704?e=1626307200&v=beta&t=qB8i0sl3x-qd3MViaZZcGPYr6DjToqF3RCvNq4B8gWQ"
+        ratio="5by4"
       ></b-image>
     </div>
   </div>
@@ -34,5 +34,21 @@
 <script>
 export default {
   name: 'AboutSection',
+  props: {
+    about: {
+      type: Object,
+      default() {
+        return {
+          description: '',
+          resume: '',
+          currently_learning: '',
+          hobbies: '',
+          profilePicture: {
+            url: '',
+          },
+        }
+      },
+    },
+  },
 }
 </script>
