@@ -1,5 +1,5 @@
 <template>
-  <div class="section columns">
+  <div class="section columns is-mobile">
     <div
       v-if="Object.keys(article).length > 0"
       class="column is-8 is-offset-2 px-2"
@@ -36,6 +36,11 @@ export default {
   data() {
     return {
       article: {},
+    }
+  },
+  head() {
+    return {
+      title: `Ted Ngeene | Blog | ${this.article.title}`,
     }
   },
   mounted() {

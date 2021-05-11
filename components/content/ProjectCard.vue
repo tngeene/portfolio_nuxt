@@ -11,7 +11,7 @@
         </div>
         <div class="column is-8 px-5">
           <h4 class="title is-4 project-title">{{ project.title }}</h4>
-          <p>{{ project.description.slice(0, 30) }}...</p>
+          <p>{{ project.summary.slice(0, 30) }}...</p>
           <p>
             <small class="mt-2 has-text-grey-dark"
               >Client: {{ project.client }}</small

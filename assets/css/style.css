@@ -41,23 +41,26 @@
   --border-color: #ded0bf;
 }
 
-.dark-mode h1, 
+.dark-mode h1,
 .dark-mode h2,
 .dark-mode h3,
-.dark-mode h4, 
+.dark-mode h4,
 .dark-mode h5,
 .dark-mode h6 {
   color: #fff !important;
 }
- 
+
 .card {
   background-color: var(--bg);
 }
-.dark-mode  .card p {
+.dark-mode .card p {
   color: #fdf9f3;
 }
 .dark-mode .has-text-grey-dark {
   color: #fdf9f3 !important;
+}
+.has-background-light {
+  background: var(--bg-secondary) !important;
 }
 html,
 body {
@@ -135,10 +138,10 @@ h3.section-title {
 .fa-linkedin:hover {
   color: var(--telegram-blue) !important;
 }
- .fa-discord:hover {
+.fa-discord:hover {
   color: var(--discord-blue) !important;
 }
-.fa-github:hover, 
+.fa-github:hover,
 .fa-dev:hover {
   color: var(--github-black) !important;
 }
@@ -160,7 +163,7 @@ h3.section-title {
   border-style: none;
 }
 .project-img-holder {
-  max-height: 12.5rem;
+  height: 12.5rem;
   overflow: hidden;
   vertical-align: middle;
 }
@@ -193,7 +196,6 @@ h3.section-title {
 .project-card:hover .columns .column {
   background-color: #fff;
 }
-
 
 .dark-mode .project-card:hover .columns .column {
   filter: brightness(10%);
@@ -265,24 +267,32 @@ pre {
   position: sticky;
 }
 .stack-list {
-  list-style: none;
   display: inline-flex;
 }
-.stack-list li:not(:last-child):after{
-  content: ", ";
+.stack-list li {
+  list-style-type: none;
+  display: inline;
+  float: left;
+}
+.stack-list li:not(:last-child):after {
+  content: ', ';
 }
 .stack-list li:last-child:after {
-  content: ".";
+  content: '.';
+}
+
+.project-overview li {
+  line-height: 2;
 }
 /* media queries */
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .project-img-holder {
+  /* .project-img-holder {
     max-height: 18.75rem;
     overflow: hidden;
     vertical-align: middle;
-  }
+  } */
   .skill-card {
     height: 19rem !important;
   }
