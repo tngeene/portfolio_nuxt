@@ -56,7 +56,9 @@
 .dark-mode  .card p {
   color: #fdf9f3;
 }
-
+.dark-mode .has-text-grey-dark {
+  color: #fdf9f3 !important;
+}
 html,
 body {
   font-family: 'Nunito', sans-serif;
@@ -251,6 +253,16 @@ h3.section-title {
 
 .contact-btn {
   border: none;
+}
+
+pre {
+  background-color: #23241f;
+}
+.blog-body {
+  line-height: 1.5;
+}
+.aside-menu {
+  position: sticky;
 }
 /* media queries */
 

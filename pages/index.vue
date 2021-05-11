@@ -25,18 +25,25 @@
     <hr />
     <section id="projects" class="container content projects ml-3">
       <h3 class="title is-3 section-title">Featured projects</h3>
-      <ProjectCard />
+      <div class="columns is-variable is-multiline mt-2">
+        <ProjectCard
+          v-for="project in projects"
+          :key="project.slug"
+          :project="project"
+        />
+      </div>
     </section>
     <hr />
     <section id="blog" class="container blog ml-3 px-3">
       <h3 class="title is-3 section-title">Latest blog posts</h3>
-      <div class="columns is-variable is-multiline mt-2">
+      <div v-if="projects" class="columns is-variable is-multiline mt-2">
         <ArticleCard
           v-for="article in articles"
           :key="article.slug"
           :article="article"
         />
       </div>
+      <div v-else class="">No project uploaded yet 🙁</div>
     </section>
     <hr />
     <section id="contact" class="container content contact ml-3">
@@ -107,6 +114,7 @@ export default {
   },
   mounted() {
     this.fetchArticles()
+    this.fetchProjects()
   },
   methods: {
     async fetchArticles() {
@@ -114,6 +122,14 @@ export default {
         this.articles = response.reverse()
         response.forEach((article) => {
           article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.small.url}`
+        })
+      })
+    },
+    async fetchProjects() {
+      await this.$strapi.find('projects').then((response) => {
+        this.projects = response.reverse()
+        response.forEach((project) => {
+          project.coverImage.url = `${baseAPIUrl}${project.coverImage.formats.small.url}`
         })
       })
     },

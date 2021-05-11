@@ -2,7 +2,7 @@
   <div class="section columns">
     <div
       v-if="Object.keys(article).length > 0"
-      class="column is-10 is-offset-2 px-2"
+      class="column is-8 is-offset-2 px-2"
     >
       <h3 class="title is-3">{{ article.title }}</h3>
       <h5 class="subtitle is-5 has-text-grey is-capitalized">
@@ -17,7 +17,12 @@
         width="640"
         height="360"
       />
-      <p v-if="article.body" v-html="$md.render(article.body.slice(0, 40))"></p>
+      <p
+        class="blog-body"
+        v-if="article.body"
+        v-html="$md.render(article.body)"
+      ></p>
+      <div id="disqus_thread" class="mt-2"></div>
     </div>
     <div v-else class="">No article yet</div>
   </div>
