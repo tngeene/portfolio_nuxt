@@ -18,8 +18,8 @@
         height="360"
       />
       <p
-        class="blog-body"
         v-if="article.body"
+        class="blog-body"
         v-html="$md.render(article.body)"
       ></p>
       <div id="disqus_thread" class="mt-2"></div>

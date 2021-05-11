@@ -264,6 +264,16 @@ pre {
 .aside-menu {
   position: sticky;
 }
+.stack-list {
+  list-style: none;
+  display: inline-flex;
+}
+.stack-list li:not(:last-child):after{
+  content: ", ";
+}
+.stack-list li:last-child:after {
+  content: ".";
+}
 /* media queries */
 
 /* Large devices (desktops, 992px and up) */
