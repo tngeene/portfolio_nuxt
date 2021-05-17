@@ -29,10 +29,21 @@
       <section id="projects" class="container content projects ml-3">
         <div class="columns is-variable is-multiline mt-2">
           <ProjectCard
-            v-for="project in projects"
+            v-for="project in filteredProjects"
             :key="project.slug"
             :project="project"
           />
+        </div>
+        <div
+          v-if="
+            filteredProjects.length > 0 &&
+            projects.length > filteredProjects.length
+          "
+          class="is-flex is-justify-content-center"
+        >
+          <button class="button is-primary" @click="showMoreProjects">
+            Show More
+          </button>
         </div>
       </section>
     </div>
@@ -47,6 +58,8 @@ export default {
   data() {
     return {
       projects: {},
+      filteredProjects: {},
+      filteredProjectsLength: 6,
     }
   },
   head() {
@@ -77,10 +90,22 @@ export default {
     async fetchProjects() {
       await this.$strapi.find('projects').then((response) => {
         this.projects = response.reverse()
+        this.filteredProjects = this.projects.slice(
+          0,
+          this.filteredProjectsLength
+        )
         response.forEach((project) => {
           project.coverImage.url = `${baseAPIUrl}${project.coverImage.formats.small.url}`
         })
       })
+    },
+    showMoreProjects() {
+      let incrementValue = 3
+      this.filteredProjectsLength = ++incrementValue
+      this.filteredProjects = this.projects.slice(
+        0,
+        this.filteredProjectsLength
+      )
     },
   },
 }

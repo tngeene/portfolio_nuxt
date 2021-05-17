@@ -4,10 +4,7 @@
       <h3 class="is-3 title has-text-white">Ted Ngeene</h3>
       <div class="is-flex is-align-items-center mb-3 is-flex-direction-column">
         <figure class="image is-128x128">
-          <img
-            class="is-rounded"
-            src="https://bulma.io/images/placeholders/128x128.png"
-          />
+          <img class="is-rounded" src="https://i.imgur.com/luwtCu2.jpg" />
         </figure>
         <p>
           Hi, My name is Ted. I'm a software engineer. welcome to my personal

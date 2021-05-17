@@ -15,10 +15,21 @@
       <section id="articles" class="container articles ml-3 px-3">
         <div class="columns is-variable is-multiline mt-2">
           <ArticleCard
-            v-for="article in articles"
+            v-for="article in filteredArticles"
             :key="article.slug"
             :article="article"
           />
+        </div>
+        <div
+          v-if="
+            filteredArticles.length > 0 &&
+            articles.length > filteredArticles.length
+          "
+          class="is-flex is-justify-content-center"
+        >
+          <button class="button is-primary" @click="showMoreArticles">
+            Show More
+          </button>
         </div>
       </section>
     </div>
@@ -33,6 +44,8 @@ export default {
   data() {
     return {
       articles: {},
+      filteredArticles: {},
+      filteredArticleLength: 6,
     }
   },
   head() {
@@ -55,10 +68,19 @@ export default {
     async fetchArticles() {
       await this.$strapi.find('articles').then((response) => {
         this.articles = response.reverse()
+        this.filteredArticles = this.articles.slice(
+          0,
+          this.filteredArticleLength
+        )
         response.forEach((article) => {
           article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.medium.url}`
         })
       })
+    },
+    showMoreArticles() {
+      let incrementValue = 4
+      this.filteredArticleLength = ++incrementValue
+      this.filteredArticles = this.articles.slice(0, this.filteredArticleLength)
     },
   },
 }
