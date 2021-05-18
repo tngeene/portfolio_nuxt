@@ -43,7 +43,10 @@ export default {
     '@nuxtjs/pwa',
     // https://strapi.nuxtjs.org/
     '@nuxtjs/strapi',
+    // https://openbase.com/js/@nuxtjs/markdownit/documentation
     '@nuxtjs/markdownit',
+    // https://github.com/neneos/nuxt-animate.css/
+    '@neneos/nuxt-animate.css',
   ],
 
   // Strapi module configuration: https://strapi.nuxtjs.org/setup
@@ -52,7 +55,7 @@ export default {
     entities: [
       'about',
       'articles',
-      'articles-series',
+      'article-series',
       'categories',
       'projects',
       'tags',

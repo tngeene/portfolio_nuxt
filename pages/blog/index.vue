@@ -13,7 +13,7 @@
     <hr />
     <div class="column is-12">
       <section id="articles" class="container articles ml-3 px-3">
-        <div class="columns is-variable is-multiline mt-2">
+        <div class="columns is-variable is-multiline mt-2 fadeInDown animated">
           <ArticleCard
             v-for="article in filteredArticles"
             :key="article.slug"

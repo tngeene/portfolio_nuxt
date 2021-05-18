@@ -25,7 +25,7 @@
       </section>
     </div>
     <hr />
-    <div class="column is-12">
+    <div class="column is-12 slideInRight animated">
       <section id="projects" class="container content projects ml-3">
         <div class="columns is-variable is-multiline mt-2">
           <ProjectCard

@@ -170,7 +170,7 @@ export default {
   methods: {
     async fetchArticles() {
       await this.$strapi.find('articles').then((response) => {
-        this.articles = response.reverse()
+        this.articles = response.reverse().slice(0, 6)
         response.forEach((article) => {
           article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.small.url}`
         })
@@ -178,7 +178,7 @@ export default {
     },
     async fetchProjects() {
       await this.$strapi.find('projects').then((response) => {
-        this.projects = response.reverse()
+        this.projects = response.reverse().slice(0, 4)
         response.forEach((project) => {
           project.coverImage.url = `${baseAPIUrl}${project.coverImage.formats.small.url}`
         })

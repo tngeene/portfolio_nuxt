@@ -1,5 +1,5 @@
 <template>
-  <div class="section columns is-mobile">
+  <div class="section columns is-mobile fadeInUp animated">
     <div
       v-if="Object.keys(article).length > 0"
       class="column is-8 is-offset-2 px-2"
@@ -8,15 +8,41 @@
       <h5 class="subtitle is-5 has-text-grey is-capitalized">
         Published
         {{ new Date(article.published_at).toLocaleDateString() }} |
-        {{ article.category.name }}
+        {{ article.category.name }} | Posted in
+        <nuxt-link
+          :to="{
+            name: 'blog-series-slug',
+            params: { slug: article.article_series.slug },
+          }"
+          class="more-link has-text-success"
+          >{{ article.article_series.title }} Series</nuxt-link
+        >
       </h5>
-      <img
-        :src="article.coverImage.url"
-        :alt="`tngeene ${article.title}`"
-        class="has-ratio"
-        width="640"
-        height="360"
-      />
+      <div class="container mb-2 article-cover-img">
+        <img
+          :src="article.coverImage.url"
+          :alt="`tngeene ${article.title}`"
+          class="blog-img"
+          height="450"
+          width="1000"
+        />
+      </div>
+
+      <article class="panel is-dark">
+        <p class="panel-heading">Success (2 Part Series)</p>
+        <a class="panel-block is-active">
+          <span class="panel-icon">
+            <i class="fas fa-book" aria-hidden="true"></i>
+          </span>
+          bulma
+        </a>
+        <a class="panel-block">
+          <span class="panel-icon">
+            <i class="fas fa-book" aria-hidden="true"></i>
+          </span>
+          jgthms.github.io
+        </a>
+      </article>
       <p
         v-if="article.body"
         class="blog-body"

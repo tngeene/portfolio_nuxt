@@ -289,6 +289,10 @@ pre {
 .project-overview li {
   line-height: 2;
 }
+.blog-img {
+  height: 18rem !important;
+  border-radius: 0.4rem 0.4rem 0 0
+}
 /* media queries */
 
 /* Large devices (desktops, 992px and up) */
