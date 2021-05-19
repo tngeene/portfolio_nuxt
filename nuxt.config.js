@@ -12,7 +12,10 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: 'https://kit.fontawesome.com/0218909da0.js' }],
+    script: [
+      { src: 'https://kit.fontawesome.com/0218909da0.js' },
+      // { src: '/dist/vue-social-sharing.js' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -22,7 +25,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: './plugins/disqus.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -47,6 +50,8 @@ export default {
     '@nuxtjs/markdownit',
     // https://github.com/neneos/nuxt-animate.css/
     '@neneos/nuxt-animate.css',
+    // https://www.npmjs.com/package/vue-social-sharing
+    'vue-social-sharing/nuxt',
   ],
 
   // Strapi module configuration: https://strapi.nuxtjs.org/setup

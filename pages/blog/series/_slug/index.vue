@@ -9,7 +9,7 @@
       </section>
     </div>
     <hr />
-    <div class="column is-12">
+    <div class="column is-12 fadeInUp animated">
       <section id="series" class="container series ml-3 px-3">
         <div class="columns is-variable is-multiline mt-2">
           <ArticleCard
