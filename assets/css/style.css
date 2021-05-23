@@ -89,12 +89,15 @@ body {
 .aside-menu {
   border-right: 0.2rem solid var(--theme-green);
   background-color: var(--sidebar-green);
-  overflow-y: auto;
 }
 .aside-menu .fab {
   color: #fff !important;
 }
 
+.scrollable-full-height {
+  height: 100vh;
+  overflow-y: auto;
+}
 .menu-list ul li:not(:last-child) {
   margin-bottom: 1.2rem;
 }
@@ -140,6 +143,10 @@ h3.section-title {
   font-size: 3.75rem !important;
   color: var(--theme-green);
 }
+.lni-cloud {
+  color: var(--sidebar-green);
+}
+
 .fa-twitter:hover {
   color: var(--docker-blue) !important;
 }
@@ -255,7 +262,8 @@ h3.section-title {
 .lni-javascript {
   color: var(--js-yellow);
 }
-.fa-vuejs {
+.fa-vuejs,
+.fa-server {
   color: var(--vue-green);
 }
 .lni-react {
@@ -295,7 +303,7 @@ pre {
 }
 .blog-img {
   height: 18rem !important;
-  border-radius: 0.4rem 0.4rem 0 0
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 /* media queries */
 

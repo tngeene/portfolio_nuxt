@@ -1,5 +1,5 @@
 <template>
-  <section class="side-nav aside-menu column is-3 is-hidden-touch">
+  <section class="side-nav aside-menu is-hidden-touch">
     <aside class="section has-text-centered has-text-white">
       <h3 class="is-3 title has-text-white">Ted Ngeene</h3>
       <div class="is-flex is-align-items-center mb-3 is-flex-direction-column">

@@ -11,7 +11,7 @@ export default {
         content: 'I build things for the web',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.png' }],
     script: [
       { src: 'https://kit.fontawesome.com/0218909da0.js' },
       // { src: '/dist/vue-social-sharing.js' },
@@ -80,7 +80,14 @@ export default {
       lang: 'en',
     },
   },
-
+  /*
+   ** Customize the progress-bar color
+   */
+  loading: {
+    color: `#44a076`,
+    continuous: true,
+    duration: 5000,
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }

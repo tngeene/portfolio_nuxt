@@ -2,9 +2,15 @@
   <div>
     <TopNav />
     <div class="columns">
-      <SideNav />
-      <div class="columns is-9">
-        <nuxt />
+      <div class="column is-3">
+        <div class="scrollable-full-height">
+          <SideNav />
+        </div>
+      </div>
+      <div class="column is-9">
+        <div class="scrollable-full-height">
+          <nuxt />
+        </div>
       </div>
     </div>
   </div>

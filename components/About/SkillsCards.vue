@@ -18,7 +18,7 @@
       </div>
       <h3 class="title is-3 skill-title">Vanilla javascript</h3>
       <div class="skill-description">
-        Using vanilla js to add flavor to the application I build.
+        Using vanilla js to add flavor to the applications I build.
       </div>
     </div>
     <div class="column is-6-mobile is-3-desktop">
@@ -67,11 +67,14 @@
     <div class="column is-6-mobile is-3-desktop">
       <div class="skill-icon">
         <i class="lni lni-docker"></i>
-        <i class="lni lni-nginx"></i>
+        <i class="lni lni-cloud"></i>
+        <i class="fas fa-server"></i>
       </div>
-      <h3 class="title is-3 skill-title">Docker</h3>
+      <h3 class="title is-3 skill-title">Docker & Cloud Deployments</h3>
       <div class="skill-description">
-        I primarily use docker to aid in the deployment pipeline.
+        I'm experienced in the deployment process, using docker containers and
+        nginx for reverse proxying. I can also deploy to various cloud
+        platforms, specifically; Google cloud and any linux server.
       </div>
     </div>
     <div class="column is-6-mobile is-3-desktop">
