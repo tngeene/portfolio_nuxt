@@ -66,16 +66,25 @@
 </template>
 
 <script>
-import SocialShare from '~/components/Content/Share'
+const SocialShare = () => ({
+  // The component to load (should be a Promise)
+  component: import('~/components/Content/Share'),
+  // The error component will be displayed if a timeout is
+  // provided and exceeded. Default: Infinity.
+  timeout: 3000,
+})
+
 const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 
 export default {
   name: 'BlogPage',
   components: { SocialShare },
-  data() {
-    return {
-      article: {},
-    }
+  asyncData({ $strapi, params }) {
+    return $strapi.findOne('articles', params.slug).then((response) => {
+      const article = response
+      article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.medium.url}`
+      return { article }
+    })
   },
   head() {
     return {
@@ -93,27 +102,16 @@ export default {
         },
         {
           hid: 'og:image',
-          content: this.article.coverImage,
+          content: `${this.article.coverImage.url}`,
           property: 'og:image',
         },
         {
           hid: 'twitter:image',
-          content: this.article.coverImage,
+          content: `${this.article.coverImage.url}`,
           property: 'twitter:image',
         },
       ],
     }
-  },
-  mounted() {
-    this.fetchArticle(this.$route.params.slug)
-  },
-  methods: {
-    async fetchArticle(slug) {
-      await this.$strapi.findOne('articles', slug).then((response) => {
-        this.article = response
-        this.article.coverImage.url = `${baseAPIUrl}${this.article.coverImage.formats.medium.url}`
-      })
-    },
   },
 }
 </script>

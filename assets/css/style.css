@@ -321,4 +321,12 @@ pre {
     height: 100vh;
     overflow-y: auto;
   }
+  .has-navbar-fixed-top {
+    padding-top: 0 !important;
+  }
+}
+@media (max-width: 576px) {
+  .skill-card {
+    height: 19rem !important;
+  }
 }

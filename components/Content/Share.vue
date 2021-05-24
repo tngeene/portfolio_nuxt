@@ -136,7 +136,7 @@ export default {
         tags.push(tag.title)
       })
 
-      if (window !== 'undefined') {
+      if (typeof window !== 'undefined') {
         url = window.location.href
       }
 
