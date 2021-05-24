@@ -8,7 +8,12 @@
       />
     </section>
     <hr />
-    <section id="services" class="container content services ml-3">
+    <section
+      id="services"
+      data-aos="fade-up"
+      data-aos-delay="300"
+      class="container content services ml-3"
+    >
       <h3 class="title is-3 section-title">My Expertise</h3>
       <p>
         I have more than 4 years' experience building software for different
@@ -18,7 +23,12 @@
       <ServicesCards />
     </section>
     <hr />
-    <section id="services" class="container content services ml-3">
+    <section
+      id="services"
+      data-aos="fade-up"
+      data-aos-delay="400"
+      class="container content services ml-3"
+    >
       <h3 class="title is-3 section-title">Skills</h3>
       <p>
         Below is a quick overview of the programming languages and tools I use.
@@ -55,7 +65,13 @@
           :article="article"
         />
       </div>
-      <div v-else class="">No project uploaded yet 🙁</div>
+      <div
+        v-else
+        class="is-flex is-flex-direction-column is-justify-content-space-evenly"
+      >
+        <img src="/img/empty.png" />
+        No project uploaded yet 🙁
+      </div>
       <div class="is-flex is-justify-content-center">
         <nuxt-link to="/blog">
           <button class="button is-success">All Blog Posts</button>

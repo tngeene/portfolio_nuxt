@@ -4,6 +4,8 @@
       <div class="columns no-gutters">
         <div class="column is-4 project-img-holder">
           <img
+            data-aos="zoom-in-up"
+            data-aos-delay="500"
             :src="project.coverImage.url"
             alt="`tngeene ${project.title}`"
             class="project-img"

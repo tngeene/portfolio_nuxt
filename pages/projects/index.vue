@@ -6,7 +6,7 @@
         Welcome to my online portfolio. Some of the amazing projects I've been
         honored to have worked on, over the course of my career are highlighted
         below. I'm also taking freelance and consultancy work at the moment. You
-        can reach me via the methods below:
+        can reach me via the channels below:
         <div class="buttons is-flex is-justify-content-center mt-2">
           <a
             href=""

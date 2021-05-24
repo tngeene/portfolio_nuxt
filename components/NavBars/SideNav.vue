@@ -33,7 +33,7 @@
       </div>
       <hr />
       <div class="menu-list is-flex is-justify-content-center is-capitalized">
-        <ul class="has-text-left">
+        <ul v-if="$nuxt.$route.name === 'index'" class="has-text-left">
           <li>
             <a href="#about"><b-icon icon="account" /> About Me</a>
           </li>
@@ -47,6 +47,26 @@
           </li>
           <li>
             <a href="#contact"> <b-icon icon="email-send" /> Contact </a>
+          </li>
+        </ul>
+        <ul v-else class="has-text-left">
+          <li>
+            <nuxt-link to="/"> <b-icon icon="account" /> About Me </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/projects">
+              <b-icon icon="briefcase-variant" /> Portfolio
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/blog">
+              <b-icon icon="typewriter" /> blog
+            </nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/contact">
+              <b-icon icon="email-send" /> Contact
+            </nuxt-link>
           </li>
         </ul>
       </div>
@@ -81,5 +101,6 @@ export default {
 }
 .menu-list a:hover {
   color: #000 !important;
+  background-color: transparent;
 }
 </style>
