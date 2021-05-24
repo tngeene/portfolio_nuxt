@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import ProjectCard from '~/components/content/ProjectCard'
+import ProjectCard from '~/components/Content/ProjectCard'
 const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 export default {
   components: { ProjectCard },

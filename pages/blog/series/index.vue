@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import SeriesCard from '~/components/content/SeriesCard'
+import SeriesCard from '~/components/Content/SeriesCard'
 const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 export default {
   components: { SeriesCard },

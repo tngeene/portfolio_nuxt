@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import SocialShare from '~/components/content/Share'
+import SocialShare from '~/components/Content/Share'
 const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 
 export default {

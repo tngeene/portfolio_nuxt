@@ -133,11 +133,11 @@
 </template>
 
 <script>
-import AboutSection from '@/components/about/DescriptionHero'
-import ArticleCard from '@/components/content/ArticleCard'
-import ProjectCard from '@/components/content/ProjectCard'
-import ServicesCards from '@/components/about/ServicesCards'
-import SkillsCards from '@/components/about/SkillsCards'
+import AboutSection from '@/components/About/DescriptionHero'
+import ArticleCard from '@/components/Content/ArticleCard'
+import ProjectCard from '@/components/Content/ProjectCard'
+import ServicesCards from '@/components/About/ServicesCards'
+import SkillsCards from '@/components/About/SkillsCards'
 const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 
 export default {

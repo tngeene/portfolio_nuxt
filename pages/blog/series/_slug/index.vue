@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import ArticleCard from '~/components/content/ArticleCard'
+import ArticleCard from '~/components/Content/ArticleCard'
 const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
 export default {
   components: { ArticleCard },
