@@ -18,12 +18,7 @@
       <ServicesCards />
     </section>
     <hr />
-    <section
-      id="services"
-      data-aos="fade-up"
-      data-aos-delay="400"
-      class="container content services ml-3"
-    >
+    <section id="services" class="container content services ml-3">
       <h3 class="title is-3 section-title">Skills</h3>
       <p>
         Below is a quick overview of the programming languages and tools I use.
