@@ -38,7 +38,7 @@
       </div>
       <h3 class="title is-3 skill-title">Python & Django</h3>
       <div class="skill-description">
-        I have 3 years experiencing working with django to build scalable
+        I have 3 years experience working with django to build scalable
         applications, using both the MVC pattern and REST(django rest framework)
         principles.
       </div>
@@ -72,9 +72,10 @@
       </div>
       <h3 class="title is-3 skill-title">Docker & Cloud Deployments</h3>
       <div class="skill-description">
-        I'm experienced in the deployment process, using docker containers and
-        nginx for reverse proxying. I can also deploy to various cloud
-        platforms, specifically; Google cloud and any linux server.
+        I'm experienced in the deployment process, using docker containers for
+        continuous integration, and nginx for reverse proxying and load
+        balancing. I can also deploy to various cloud platforms, specifically;
+        Google cloud and any linux server.
       </div>
     </div>
     <div class="column is-6-mobile is-3-desktop">

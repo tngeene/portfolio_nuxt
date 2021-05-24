@@ -8,12 +8,7 @@
       />
     </section>
     <hr />
-    <section
-      id="services"
-      data-aos="fade-up"
-      data-aos-delay="300"
-      class="container content services ml-3"
-    >
+    <section id="services" class="container content services ml-3">
       <h3 class="title is-3 section-title">My Expertise</h3>
       <p>
         I have more than 4 years' experience building software for different
@@ -164,7 +159,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Uisng technology to enhance the world we live in',
+          content: 'Using technology to enhance the world we live in',
         },
       ],
       link: [
