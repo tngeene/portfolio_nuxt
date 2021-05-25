@@ -10,6 +10,7 @@
       <div class="column is-9">
         <div class="scrollable-full-height">
           <nuxt />
+          <Footer />
         </div>
       </div>
     </div>
@@ -17,10 +18,11 @@
 </template>
 
 <script>
+import Footer from '~/components/Footer.vue'
 import SideNav from '~/components/NavBars/SideNav.vue'
 import TopNav from '~/components/NavBars/TopNav.vue'
 
 export default {
-  components: { SideNav, TopNav },
+  components: { Footer, SideNav, TopNav },
 }
 </script>
