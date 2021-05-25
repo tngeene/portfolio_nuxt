@@ -8,7 +8,8 @@
         {{ about.description }}
       </p>
       <div class="interests mt-3">
-        <strong>Currently Learing:</strong> {{ about.currently_learning }}<br />
+        <strong>Currently Learning:</strong>
+        {{ about.currently_learning }}<br />
         <strong>Interest/Hobbies:</strong> {{ about.hobbies }}<br />
       </div>
       <div class="mt-5">
