@@ -1,7 +1,7 @@
 .
 <template>
   <div class="columns">
-    <div data-aos="zoom-in-up" data-aos-delay="500" class="column is-7">
+    <div class="column is-7 fadeInRight animated">
       <h2 class="title is-2">Ted Ngeene</h2>
       <h5 class="subtitle is-5">Software Engineer</h5>
       <p>
@@ -12,7 +12,7 @@
         {{ about.currently_learning }}<br />
         <strong>Interest/Hobbies:</strong> {{ about.hobbies }}<br />
       </div>
-      <div class="mt-5">
+      <div class="mt-5 is-flex is-justify-content-around">
         <a class="button is-success is-light mr-2" href="#projects"
           ><span class="mdi mdi-briefcase-variant mdi-24px"></span> View
           Portfolio</a
