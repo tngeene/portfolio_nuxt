@@ -23,6 +23,10 @@
                 <i class="lni lni-briefcase"></i> Industry:
                 {{ project.industry }}
               </li>
+              <li v-if="project.industry">
+                <i class="lni lni-target-customer"></i> Client:
+                {{ project.client }}
+              </li>
               <li v-if="project.live_link">
                 <i class="lni lni-link"></i> Live Link:
                 <a :href="project.live_link" target="_blank">{{

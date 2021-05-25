@@ -1,7 +1,7 @@
 .
 <template>
   <div class="columns">
-    <div class="column is-7">
+    <div data-aos="zoom-in-up" data-aos-delay="500" class="column is-7">
       <h2 class="title is-2">Ted Ngeene</h2>
       <h5 class="subtitle is-5">Software Engineer</h5>
       <p>

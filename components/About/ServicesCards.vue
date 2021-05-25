@@ -1,5 +1,9 @@
 <template>
-  <div class="columns is-variable is-multiline mt-2">
+  <div
+    data-aos="zoom-in-up"
+    data-aos-delay="500"
+    class="columns is-variable is-multiline mt-2"
+  >
     <div class="column is-one-third">
       <div class="card skill-card">
         <div class="column">
