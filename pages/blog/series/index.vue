@@ -38,7 +38,7 @@
 
 <script>
 import SeriesCard from '~/components/Content/SeriesCard'
-const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 export default {
   components: { SeriesCard },
   data() {

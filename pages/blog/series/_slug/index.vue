@@ -25,7 +25,7 @@
 
 <script>
 import ArticleCard from '~/components/Content/ArticleCard'
-const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 export default {
   components: { ArticleCard },
   data() {

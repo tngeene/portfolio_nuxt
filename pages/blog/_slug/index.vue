@@ -74,7 +74,7 @@ const SocialShare = () => ({
   timeout: 3000,
 })
 
-const baseAPIUrl = process.env.STRAPI_URL
+const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 
 export default {
   name: 'BlogPage',

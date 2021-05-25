@@ -128,7 +128,7 @@ import ArticleCard from '@/components/Content/ArticleCard'
 import ProjectCard from '@/components/Content/ProjectCard'
 import ServicesCards from '@/components/About/ServicesCards'
 import SkillsCards from '@/components/About/SkillsCards'
-const baseAPIUrl = process.env.STRAPI_URL
+const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 
 export default {
   name: 'HomePage',
