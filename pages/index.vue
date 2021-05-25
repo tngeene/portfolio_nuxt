@@ -128,7 +128,7 @@ import ArticleCard from '@/components/Content/ArticleCard'
 import ProjectCard from '@/components/Content/ProjectCard'
 import ServicesCards from '@/components/About/ServicesCards'
 import SkillsCards from '@/components/About/SkillsCards'
-const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+const baseAPIUrl = process.env.STRAPI_URL
 
 export default {
   name: 'HomePage',

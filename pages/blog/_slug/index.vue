@@ -74,7 +74,7 @@ const SocialShare = () => ({
   timeout: 3000,
 })
 
-const baseAPIUrl = process.env.STRAPI_URL || 'http://localhost:1337'
+const baseAPIUrl = process.env.STRAPI_URL
 
 export default {
   name: 'BlogPage',
