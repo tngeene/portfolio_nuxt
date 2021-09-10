@@ -86,6 +86,11 @@ export default {
       return { article }
     })
   },
+  data() {
+    return {
+      article: {},
+    }
+  },
   head() {
     return {
       title: `Ted Ngeene | Blog | ${this.article.title}`,
@@ -112,6 +117,17 @@ export default {
         },
       ],
     }
+  },
+  mounted() {
+    this.fetchArticle(this.$route.params.slug)
+  },
+  methods: {
+    async fetchArticle(slug) {
+      await this.$strapi.findOne('projects', slug).then((response) => {
+        this.article = response
+        this.article.coverImage.url = `${baseAPIUrl}${this.article.coverImage.formats.medium.url}`
+      })
+    },
   },
 }
 </script>

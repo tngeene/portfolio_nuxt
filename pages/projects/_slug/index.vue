@@ -97,8 +97,6 @@ export default {
       await this.$strapi.findOne('projects', slug).then((response) => {
         this.project = response
         this.project.coverImage.url = `${baseAPIUrl}${this.project.coverImage.formats.medium.url}`
-        // eslint-disable-next-line no-console
-        console.log(this.project.coverImage.url)
       })
     },
   },
