@@ -9,7 +9,7 @@
         Published
         {{ new Date(article.published_at).toLocaleDateString() }} |
         {{ article.category.name }}
-        <!-- <p v-if="article.article_series">
+        <p v-if="article.article_series">
           Posted in
           <nuxt-link
             :to="{
@@ -19,7 +19,7 @@
             class="more-link has-text-success"
             >{{ article.article_series.title }} Series</nuxt-link
           >
-        </p> -->
+        </p>
       </h5>
       <div class="container mb-2 article-cover-img">
         <img
@@ -31,7 +31,7 @@
         />
       </div>
 
-      <!-- <article class="panel is-dark">
+      <article class="panel is-dark">
         <p class="panel-heading">Success (2 Part Series)</p>
         <a class="panel-block is-active">
           <span class="panel-icon">
@@ -45,7 +45,7 @@
           </span>
           jgthms.github.io
         </a>
-      </article> -->
+      </article>
       <p
         v-if="article.body"
         class="blog-body"
@@ -79,8 +79,8 @@ const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 export default {
   name: 'BlogPage',
   // components: { SocialShare },
-  asyncData({ $strapi, params }) {
-    return $strapi.findOne('articles', params.slug).then((response) => {
+  async asyncData({ $strapi, params }) {
+    return await $strapi.findOne('articles', params.slug).then((response) => {
       const article = response
       article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.medium.url}`
       return { article }
