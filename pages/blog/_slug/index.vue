@@ -51,10 +51,10 @@
         class="blog-body"
         v-html="$md.render(article.body)"
       ></p>
-      <div id="social-share" class="my-2">
+      <!-- <div id="social-share" class="my-2">
         <h4 class="is-title is-4">Share to social media</h4>
         <SocialShare :key="article.slug" :article="article" />
-      </div>
+      </div> -->
       <div id="disqus_thread" class="mt-2">
         <client-only>
           <Disqus />
@@ -66,19 +66,19 @@
 </template>
 
 <script>
-const SocialShare = () => ({
-  // The component to load (should be a Promise)
-  component: import('~/components/Content/Share'),
-  // The error component will be displayed if a timeout is
-  // provided and exceeded. Default: Infinity.
-  timeout: 3000,
-})
+// const SocialShare = () => ({
+//   // The component to load (should be a Promise)
+//   component: import('~/components/Content/Share'),
+//   // The error component will be displayed if a timeout is
+//   // provided and exceeded. Default: Infinity.
+//   timeout: 3000,
+// })
 
 const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 
 export default {
   name: 'BlogPage',
-  components: { SocialShare },
+  // components: { SocialShare },
   asyncData({ $strapi, params }) {
     return $strapi.findOne('articles', params.slug).then((response) => {
       const article = response
