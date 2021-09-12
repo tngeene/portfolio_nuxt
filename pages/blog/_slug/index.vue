@@ -79,13 +79,13 @@ const baseAPIUrl = process.env.STRAPI_URL || 'https://portfolio.tngeene.com'
 export default {
   name: 'BlogPage',
   // components: { SocialShare },
-  async asyncData({ $strapi, params }) {
-    return await $strapi.findOne('articles', params.slug).then((response) => {
-      const article = response
-      article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.medium.url}`
-      return { article }
-    })
-  },
+  // async asyncData({ $strapi, params }) {
+  //   return await $strapi.findOne('articles', params.slug).then((response) => {
+  //     const article = response
+  //     article.coverImage.url = `${baseAPIUrl}${article.coverImage.formats.medium.url}`
+  //     return { article }
+  //   })
+  // },
   data() {
     return {
       article: {},
@@ -105,16 +105,16 @@ export default {
           content: `${this.article.body}`,
           property: 'og:description',
         },
-        {
-          hid: 'og:image',
-          content: `${this.article.coverImage.url}`,
-          property: 'og:image',
-        },
-        {
-          hid: 'twitter:image',
-          content: `${this.article.coverImage.url}`,
-          property: 'twitter:image',
-        },
+        // {
+        //   hid: 'og:image',
+        //   content: `${this.article.coverImage.url}`,
+        //   property: 'og:image',
+        // },
+        // {
+        //   hid: 'twitter:image',
+        //   content: `${this.article.coverImage.url}`,
+        //   property: 'twitter:image',
+        // },
       ],
     }
   },
@@ -123,7 +123,7 @@ export default {
   },
   methods: {
     async fetchArticle(slug) {
-      await this.$strapi.findOne('projects', slug).then((response) => {
+      await this.$strapi.findOne('articles', slug).then((response) => {
         this.article = response
         this.article.coverImage.url = `${baseAPIUrl}${this.article.coverImage.formats.medium.url}`
       })
