@@ -31,7 +31,7 @@
         />
       </div>
 
-      <article class="panel is-dark">
+      <!-- <article class="panel is-dark">
         <p class="panel-heading">Success (2 Part Series)</p>
         <a class="panel-block is-active">
           <span class="panel-icon">
@@ -45,7 +45,7 @@
           </span>
           jgthms.github.io
         </a>
-      </article>
+      </article> -->
       <p
         v-if="article.body"
         class="blog-body"
