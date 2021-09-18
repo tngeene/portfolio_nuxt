@@ -59,6 +59,8 @@ export default {
     '@neneos/nuxt-animate.css',
     // https://www.npmjs.com/package/vue-social-sharing
     'vue-social-sharing/nuxt',
+    // https://google-analytics.nuxtjs.org/setup
+    '@nuxtjs/google-analytics',
   ],
 
   // Strapi module configuration: https://strapi.nuxtjs.org/setup
@@ -79,6 +81,11 @@ export default {
     linkify: true,
     breaks: true,
     injected: true,
+    runtime: true,
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID,
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
