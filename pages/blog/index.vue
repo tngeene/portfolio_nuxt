@@ -78,9 +78,11 @@ export default {
       })
     },
     showMoreArticles() {
-      let incrementValue = 4
-      this.filteredArticleLength = ++incrementValue
+      const incrementValue = 2
+      this.filteredArticleLength += incrementValue
       this.filteredArticles = this.articles.slice(0, this.filteredArticleLength)
+      // eslint-disable-next-line no-console
+      console.log(`${this.filteredArticleLength}, ${this.filteredArticles}`)
     },
   },
 }

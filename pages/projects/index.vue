@@ -59,7 +59,7 @@ export default {
     return {
       projects: {},
       filteredProjects: {},
-      filteredProjectsLength: 6,
+      filteredProjectsLength: 4,
     }
   },
   head() {
@@ -100,8 +100,8 @@ export default {
       })
     },
     showMoreProjects() {
-      let incrementValue = 3
-      this.filteredProjectsLength = ++incrementValue
+      const incrementValue = 4
+      this.filteredProjectsLength += incrementValue
       this.filteredProjects = this.projects.slice(
         0,
         this.filteredProjectsLength
