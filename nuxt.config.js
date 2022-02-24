@@ -18,7 +18,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.png' }],
     script: [
       { src: 'https://kit.fontawesome.com/0218909da0.js' },
-      {src: 'https://cdn.splitbee.io/sb.js', async: true }
+      { src: 'https://cdn.splitbee.io/sb.js', async: true },
       // { src: '/dist/vue-social-sharing.js' },
     ],
   },
