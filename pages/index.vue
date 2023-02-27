@@ -11,7 +11,7 @@
     <section id="services" class="container content services ml-3">
       <h3 class="title is-3 section-title">My Expertise</h3>
       <p>
-        I have more than 4 years' experience building software for different
+        I have more than 5 years' experience building software for different
         clients, ranging from SMEs to big corporations. Below is a quick
         overview of the services I provide.
       </p>

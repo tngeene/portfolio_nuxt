@@ -38,7 +38,7 @@
       </div>
       <h3 class="title is-3 skill-title">Python & Django</h3>
       <div class="skill-description">
-        I have 3 years experience working with django to build scalable
+        I have 5 years experience working with django to build scalable
         applications, using both the MVC pattern and REST(django rest framework)
         principles.
       </div>
@@ -50,7 +50,7 @@
       </div>
       <h3 class="title is-3 skill-title">Php & Laravel</h3>
       <div class="skill-description">
-        As with django, I also dabble in php development, applying the best
+        I also dabble in php development, applying the best
         system design principles to build modern and scalable web apps.
       </div>
     </div>
